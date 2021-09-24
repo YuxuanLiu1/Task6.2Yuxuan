@@ -272,7 +272,7 @@ app.post('/charge', (req, res) => {
             currency: 'usd',
             customer: customer.id,
             description: 'Thank you for your generous donation.'
-        })).then(() => res.render('complete.html'))
+        })).then(() => res.redirect('https://aqueous-garden-63450.herokuapp.com/complete.html'))
             .catch(err => console.log(err))
     } catch (err) { res.send(err) }
 })
