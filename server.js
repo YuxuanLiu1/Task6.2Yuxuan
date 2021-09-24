@@ -266,7 +266,6 @@ app.post('/charge', (req, res) => {
     try {
         stripe.customers.create({
             name: req.body.name,
-            email: req.body.email,
             source: req.body.stripeToken
         }).then(customer => stripe.charges.create({
             amount: req.body.amount * 100,
