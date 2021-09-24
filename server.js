@@ -212,7 +212,7 @@ app.use(passport.session());
 app.set('view engine','ejs');
 
 app.get('/success',function(req,res){
-    res.redirect("http://localhost:8000/payment.html")
+    res.redirect("http://aqueous-garden-63450.herokuapp.com/payment.html")
 });
 
 app.get('/error',function(req,res){
@@ -235,7 +235,7 @@ const GOOGLE_CLIENT_SECRET = 'tP4HprKWcFWlzvh8tVZTNwUd';
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL:"http://localhost:8000/auth/google/callback"
+    callbackURL:"http://aqueous-garden-63450.herokuapp.com/auth/google/callback"
     },
     function(accessToken,refreshToken,profile,done){
         userProfile = profile;
@@ -272,7 +272,7 @@ app.post('/charge', (req, res) => {
             currency: 'usd',
             customer: customer.id,
             description: 'Thank you for your generous donation.'
-        })).then(() => res.redirect('http://localhost:8000/complete.html'))
+        })).then(() => res.redirect('http://aqueous-garden-63450.herokuapp.com/complete.html'))
             .catch(err => console.log(err))
     } catch (err) { res.send(err) }
 })
