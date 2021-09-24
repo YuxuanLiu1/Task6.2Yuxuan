@@ -1,0 +1,35 @@
+{
+  "name": "tt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "v14.16.0",
+    "npm": "7.7.6"
+  },
+  "dependencies": {
+    "@heroku/buildpack-registry": "^1.0.1",
+    "async-file": "^2.0.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cli-ux": "^4.9.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "got": "^8.3.2",
+    "heroku": "^7.59.0",
+    "mongoose": "^6.0.2",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "phoenix": "*",
+    "stripe": "^8.176.0",
+    "validator": "^13.6.0"
+  }
+}
