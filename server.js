@@ -230,8 +230,8 @@ passport.deserializeUser(function(obj,cb){
 
 // google login authentication
 
-const GOOGLE_CLIENT_ID = '898637008850-lk4untndfva7sq0ibu4tp4546utul8q7.apps.googleusercontent.com';
-const GOOGLE_CLIENT_SECRET = 'K2vo2TSGZoBDbHYgdJHo8hvH';
+const GOOGLE_CLIENT_ID = '898637008850-k0us2qkl27r0rciunqpsldih6ofv7vsd.apps.googleusercontent.com';
+const GOOGLE_CLIENT_SECRET = 'tP4HprKWcFWlzvh8tVZTNwUd';
 
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
