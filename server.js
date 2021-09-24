@@ -13,7 +13,6 @@ const { createBrotliCompress } = require('zlib')
 //mongoose.connect("mongodb://localhost:27017/taskDB", { useNewUrlParser: true })
 mongoose.connect("mongodb+srv://adminyuxuan:64l06x22L@cluster0.5u1s3.mongodb.net/taskDB?retryWrites=true&w=majority", { useNewUrlParser: true })
 const PORT = process.env.PORT || 8000
-const ip = "127.0.0.1";
 const db = []
 
 const userSchema = new mongoose.Schema({
@@ -160,7 +159,7 @@ app.listen(process.env.PORT);
 let port = process.env.PORT;
 
  app.listen(8000, (req,res)=>{
-     console.log(`server is running at http://${ip}:${PORT}`);
+     console.log(`server is running at http://${PORT}`);
      
 })
 
@@ -213,7 +212,7 @@ app.use(passport.session());
 app.set('view engine','ejs');
 
 app.get('/success',function(req,res){
-    res.redirect("https://aqueous-garden-63450.herokuapp.com/payment.html")
+    res.redirect("http://localhost:8000/payment.html")
 });
 
 app.get('/error',function(req,res){
@@ -236,7 +235,7 @@ const GOOGLE_CLIENT_SECRET = 'tP4HprKWcFWlzvh8tVZTNwUd';
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL:"https://aqueous-garden-63450.herokuapp.com/auth/google/callback"
+    callbackURL:"http://localhost:8000/auth/google/callback"
     },
     function(accessToken,refreshToken,profile,done){
         userProfile = profile;
@@ -273,7 +272,7 @@ app.post('/charge', (req, res) => {
             currency: 'usd',
             customer: customer.id,
             description: 'Thank you for your generous donation.'
-        })).then(() => res.redirect('https://aqueous-garden-63450.herokuapp.com/complete.html'))
+        })).then(() => res.redirect('http://localhost:8000/complete.html'))
             .catch(err => console.log(err))
     } catch (err) { res.send(err) }
 })
