@@ -1,4 +1,4 @@
-const stripe = Stripe('pk_test_51JZ1xPGCvPetBaKLQBdwjh8S6sb6hw5Q70WD5pM4x5oavXU2WZPVC5TLCPb6Tzyz7gshxfpx18duefA7wynD50zc00P8xHR6hj');
+const stripe = Stripe('pk_test_51Jd6kzAHulU9sUTHwCI8gXMh20DzkudbD87EbtXsnYjcEBG3HqFEA4XwtYfHKvwdI2dFnYtyjrH133uAf2unMAQ500NS8aEFNC');
 const elements = stripe.elements();
 
 var style = {
